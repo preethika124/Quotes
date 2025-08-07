@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Quote Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎈 Daily Dose of Wisdom 🎈</h1>
+
+  <div style="text-align: center;">
+    <button id="favorites-toggle">💖 Favorites</button>
+  </div>
+
+  <div id="quote-box">
+    <div id="quote">Loading...</div>
+    <div id="author"></div>
+    <button id="new-quote">New Quote</button>
+    <button id="save-quote">♡ Save</button>
+  </div>
+
+  <div id="favorites">
+    <h2>Favorite Quotes</h2>
+    <ul id="favorites-list"></ul>
+  </div>
+
+  <div id="balloons"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 1000% 1000%;
+      animation: gradientMove 15s ease infinite;
+      min-height: 100vh;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5, #47e8d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #ff6ec4, 0 0 40px #7873f5; }
+    }
+
+    #quote-box {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+      background: #ffffffbb;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: opacity 0.5s ease;
+    }
+
+    #quote {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #author {
+      font-style: italic;
+      color: #444;
+    }
+
+    button {
+      padding: 0.7rem 1.2rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    #new-quote {
+      background-color: #6a11cb;
+      color: white;
+    }
+
+    #new-quote:hover {
+      background-color: #2575fc;
+      transform: scale(1.05);
+    }
+
+    #save-quote {
+      background-color: white;
+      border: 2px solid #e91e63;
+      color: #e91e63;
+    }
+
+    #save-quote.saved {
+      background-color: #e91e63;
+      color: white;
+    }
+
+    #save-quote:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #e91e63aa;
+    }
+
+    #favorites-toggle {
+      background-color: white;
+      border: 2px solid #ff4081;
+      color: #ff4081;
+    }
+
+    #favorites-toggle:hover {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    #favorites {
+      display: none;
+      margin-top: 2rem;
+      background-color: #ffffffdd;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #balloons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .balloon {
+      width: 30px;
+      height: 40px;
+      background: radial-gradient(circle at 30% 30%, #ff8a00, #e52e71);
+      border-radius: 50% 50% 50% 50%;
+      position: absolute;
+      animation: float 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-120%); }
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      #quote { font-size: 1.2rem; }
+    }
+ 
